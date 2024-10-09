@@ -6,7 +6,7 @@ body{
     font-family: Arial, sans-serif;
 }
 
-h1, h2{
+h1, h2, h3{
     font-family: "Alex Brush", cursive;
     font-weight: 400;
     font-style: normal;  
@@ -14,11 +14,12 @@ h1, h2{
 
 p, a{
     font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 200;
+    font-weight: 200, bold;
     font-style: normal;
-    letter-spacing: 1px;    
+    letter-spacing: 1px;   
+    color: rgb(56, 56, 56);
+     
 }
-
 
 .bsb-hero-1{   
     background-image: url('../img/img_teste.jpg');
@@ -27,3 +28,112 @@ p, a{
     max-height: 100%; 
 }
 
+.sobre, .traje, .presente{    
+    background-image: url('../img/wallpaper_teste01.jpg');  
+    background-size: cover; /* ou 'contain' dependendo do efeito desejado */
+    background-repeat: no-repeat; /* impede a repetição da imagem */
+    background-position: center; /* centraliza a imagem */
+}
+
+.local, .reserva{
+    background-color:#666956 ;
+}
+
+.linha-dourada {
+    width: 50%; /* Ajuste a largura conforme necessário */
+    height: 1px; /* Espessura do traço */
+    background-color: rgb(225, 160, 62); /* Cor dourada */
+    margin: 20px auto; /* Centraliza a linha e adiciona margem */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+}
+
+#btnConfirmar{
+    background-color: #fff;
+    color: #777;
+    animation: pulsar 1.5s infinite;
+}
+
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sobre {
+        background-image: url('../img/wallpaper_teste01.jpg'); /* Imagem otimizada para celular */
+        background-size: contain; /* ou 'contain', conforme necessário */
+        background-position: center; /* Ajuste conforme necessário */
+    }
+}
