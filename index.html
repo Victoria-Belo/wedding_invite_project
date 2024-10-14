@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- Nos casamos! Esperamos você para celebrar juntos! 
- Como chegar? Mapa  | Vestimenta Informal | Sua presença é um grande presente, mas se desejar nos dar algo, pode fazê-lo das seguintes formas | Fizemos reserva de um lugar para você. É muito importante para nós que confirme sua presença botão confirmar|Os melhores momentos da vida devem ser compartilhados -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -30,18 +28,18 @@
 </head>
 <body>
     <!-- Hero -->
-    <section class="bsb-hero-1 px-4 bsb-overlay bsb-hover-pull hero">
+    <section class="bsb-hero-1 px-4 bsb-overlay bsb-hover-pull hero img-fluid">
         <div class="container">
            <div class="row justify-content-md-center">
                 <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6 text-center text-white">
                     <h2 class="lead display-3 mb-3">Lucas & Victória</h2>
-                    <!-- <p class="mb-5">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>              -->
+                    
                 </div>
            </div>
         </div>
     </section>
     <!-- Hero -->     
-    <div class="sobre text-secondary px-4 py-5 text-center">
+    <div class="sobre text-secondary px-5 py-4 text-center text-black img-fluid">
         <div class="py-5">
             <h1 class="lead display-3 mb-3 text-black">Nos casamos!</h1>
             <div class="mx-auto">
@@ -58,7 +56,7 @@
         <p class="fs-5 mb-4 text-white">Rua Barão do Amazonas, 360, Cobertura BL2 - Centro, Niterói </p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.659993242406!2d-43.120761699999996!3d-22.8890152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983c0c5586765%3A0xb506ceb18349698b!2sR.%20Bar%C3%A3o%20do%20Amazonas%2C%20360%20-%20Centro%2C%20Niter%C3%B3i%20-%20RJ%2C%2024030-110!5e0!3m2!1spt-BR!2sbr!4v1728357343956!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"   style="overflow:hidden;height:350px;width:100%;" height="100%" width="100%" title="Rua Barão do Amazonas"></iframe>        
     </div>
-    <div class="traje text-secondary px-4 py-5  text-center text-black">
+    <div class="traje text-secondary px-4 py-5 text-center text-black img-fluid">
         <div class="py-5">
             <h1 class="lead display-3 mb-3">Vestimenta</h1>           
             <div class="mx-auto">    
@@ -86,13 +84,12 @@
             <h1 class="lead display-3 mb-3 text-black">Presente</h1>
             <div class="mx-auto">
                 <p class="fs-5 mb-4">Sua presença é o melhor presente, <br>mas se quiser presentear com algo a mais, aqui estão algumas sugestões:</p>
-                <div class="linha-dourada"></div><br>
-                <p class="fs-5 mb-4">Clique para descobrir</p><br>
+                <div class="linha-dourada"></div><br>                
                 <div class="d-flex justify-content-center">                                     
                     <a href="HTTPS://LISTAS.CASASBAHIA.COM.BR/VICTORIAELUCAS_LISTA_PRESENTE" target="_blank">                       
                         <div class="box center" style="z-index: 2;">                            
                             <div class="box-body">                              
-                                <img class="img" src="assets/img/heart_img.png" width="120px"; height="120px";>
+                                <img class="img" src="assets/img/heart_img.png" width="150px"; height="140px "; alt="" >
                                 <div class="box-lid">                            
                                     <div class="box-bowtie"></div>                              
                                 </div>
@@ -111,5 +108,27 @@
         <!-- Copyright -->
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+        const boxBody = document.querySelector('.box-body');
+        const img = document.querySelector('.img');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    boxBody.classList.add('animate');
+                    setTimeout(() => {
+                    img.style.animation = 'pulse 0.9s infinite'; 
+                }, 650); 
+                   
+                } else {
+                    boxBody.classList.remove('animate'); 
+                    img.style.animation = '';
+                   
+                }
+            });
+        });
+        observer.observe(boxBody);
+    });
+    </script>
 </body>
 </html>
