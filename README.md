@@ -1,5 +1,3 @@
 # Convite digital 
 ## Demo
-<div style="align: center">
-    <video src="assets/video/demo.webm" muted autoplay loop> </video>
-</div>
+https://github.com/user-attachments/assets/d2ca726e-0382-48c2-bf66-941da4d5bd21
